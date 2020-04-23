@@ -15,7 +15,7 @@ defmodule PhxHelloWeb.UserController do
   end
 
   def create(conn, %{"user" => user_params}) do
-    case Account.create_user(user_params) do
+    case Account.register_user(user_params) do
       {:ok, user} ->
         conn
         |> put_flash(:info, "User created successfully.")

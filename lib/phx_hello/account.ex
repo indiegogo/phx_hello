@@ -16,6 +16,12 @@ defmodule PhxHello.Account do
     |> Repo.insert()
   end
 
+  def register_user(attrs \\ %{}) do
+    %User{}
+    |> User.registration_changeset(attrs)
+    |> Repo.insert()
+  end
+
   def update_user(%User{} = user, attrs) do
     user
     |> User.changeset(attrs)
