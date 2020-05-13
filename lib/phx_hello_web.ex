@@ -23,6 +23,7 @@ defmodule PhxHelloWeb do
 
       import Plug.Conn
       import PhxHelloWeb.Gettext
+      import PhxHelloWeb.Auth, only: [authenticate_user: 2]
       alias PhxHelloWeb.Router.Helpers, as: Routes
     end
   end

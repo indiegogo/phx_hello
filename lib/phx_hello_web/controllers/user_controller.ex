@@ -4,6 +4,8 @@ defmodule PhxHelloWeb.UserController do
   alias PhxHello.Account
   alias PhxHello.Account.User
 
+  plug :authenticate_user when action in [:index, :show]
+
   def index(conn, _params) do
     users = Account.list_users()
     render(conn, "index.html", users: users)
