@@ -6,6 +6,7 @@ config :phx_hello, PhxHello.Repo,
   password: "postgres",
   database: "phx_hello_dev",
   hostname: "localhost",
+  port: "5434",
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
 
