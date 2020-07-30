@@ -51,6 +51,7 @@ defmodule PhxHelloWeb do
       use Phoenix.Router
       import Plug.Conn
       import Phoenix.Controller
+      import PhxHelloWeb.Auth, only: [authenticate_user: 2]
     end
   end
 

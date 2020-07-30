@@ -22,6 +22,12 @@ defmodule PhxHelloWeb.Router do
     resources "/sessions", SessionController, only: [:new, :create, :delete]
   end
 
+  scope "/manage", PhxHelloWeb do
+    pipe_through [:browser, :authenticate_user]
+
+    resources "/projects", ProjectController
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", PhxHelloWeb do
   #   pipe_through :api
