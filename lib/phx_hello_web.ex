@@ -25,6 +25,7 @@ defmodule PhxHelloWeb do
       import PhxHelloWeb.Gettext
       import PhxHelloWeb.Auth, only: [authenticate_user: 2]
       alias PhxHelloWeb.Router.Helpers, as: Routes
+      import Phoenix.LiveView.Controller
     end
   end
 
@@ -43,6 +44,7 @@ defmodule PhxHelloWeb do
       import PhxHelloWeb.ErrorHelpers
       import PhxHelloWeb.Gettext
       alias PhxHelloWeb.Router.Helpers, as: Routes
+      import Phoenix.LiveView.Helpers
     end
   end
 
@@ -52,6 +54,7 @@ defmodule PhxHelloWeb do
       import Plug.Conn
       import Phoenix.Controller
       import PhxHelloWeb.Auth, only: [authenticate_user: 2]
+      import Phoenix.LiveView.Router
     end
   end
 

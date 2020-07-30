@@ -44,4 +44,7 @@ defmodule PhxHelloWeb.Endpoint do
   plug Plug.Head
   plug Plug.Session, @session_options
   plug PhxHelloWeb.Router
+
+  socket "/live", Phoenix.LiveView.Socket,
+    websocket: [connect_info: [session: @session_options]]
 end
